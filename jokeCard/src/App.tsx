@@ -16,18 +16,17 @@ function App() {
   const [triggerFetch, setTriggerFetch] = useState(false);
   const { data, isLoading, error } = useData(undefined, [triggerFetch]);
 
-  // שימוש ב-useEffect כדי להוסיף בדיחה חדשה כאשר הנתונים מתעדכנים
   useEffect(() => {
     if (data && !isLoading && !error) {
-      setJokes((prevJokes) => [data, ...prevJokes]); // הוספת הבדיחה לראש המערך
-      setLoadingIndexes((prevIndexes) => prevIndexes.slice(1)); // הסרת האינדקס הראשון מכרטיסי השלד
+      setJokes((prevJokes) => [data, ...prevJokes]); 
+      setLoadingIndexes((prevIndexes) => prevIndexes.slice(1)); 
     }
   }, [data, isLoading, error]);
-
-  // פונקציה להפעלת הטריגר להבאת בדיחה חדשה
+// Joke Time :D 
+ 
   const addJoke = () => {
     setTriggerFetch((prev) => !prev);
-    setLoadingIndexes((prevIndexes) => [jokes.length, ...prevIndexes]); // הוספת אינדקס של כרטיס שלד חדש לראש המערך
+    setLoadingIndexes((prevIndexes) => [jokes.length, ...prevIndexes]);
   };
 
   return (

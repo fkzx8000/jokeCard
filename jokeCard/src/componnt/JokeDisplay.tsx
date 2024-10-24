@@ -37,11 +37,11 @@ const JokeDisplay: React.FC<JokeDisplayProps> = ({ data, isLoading, error }) => 
                 ID: {data.id}
             </Text>
             <Flex alignItems="center" mb={3}>
-                <Text fontSize="xl" fontWeight="bold" mr={2}>Joke</Text>
-                <Badge colorScheme="green">{data.type}</Badge>
             </Flex>
             <Text mt={3}><strong>Setup:</strong> {data.setup}</Text>
             <Text mt={2}><strong>Punchline:</strong> {data.punchline}</Text>
+            <Badge colorScheme="green">{data.type}</Badge>
+
         </Box>
     );
 }
