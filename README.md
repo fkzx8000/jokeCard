@@ -1,6 +1,6 @@
 # Joke Mini Project
 
-![Screenshot](./jokeCard/assets/screenshot.png)
+![Screenshot](./jokeCard/src/assets/screenshot.png)
 
 ## Project Description
 
